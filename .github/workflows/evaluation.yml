@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GHA_WORKFLOW_TRIGGER }}
+          github-token: ${{ secrets.GHT_EXECUTE_ACTIONS }}
           script: |
             const result = await github.rest.actions.createWorkflowDispatch({
               owner: 'stormeye2000',
