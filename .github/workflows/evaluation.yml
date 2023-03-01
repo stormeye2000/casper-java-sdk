@@ -12,5 +12,6 @@ jobs:
           owner: stormeye2000
           github_user: stormeye2000
           repo: cspr-java-sdk-evaluation
+          ref: main
           github_token: ${{ secrets.GHT_EXECUTE_ACTIONS }}
-          workflow_file_name: evaluation.yaml
+          workflow_sfile_name: evaluation.yaml
