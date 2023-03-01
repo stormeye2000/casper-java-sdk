@@ -1,10 +1,7 @@
 name: generate-jekyll-pages-for-docs
 
 on:
-  workflow_run:
-    workflows: [ update-gh-pages ]
-    branches: [ main ]
-    types: [ completed ]
+  workflow_dispatch:
 
 jobs:
   generate-jekyll-pages:
