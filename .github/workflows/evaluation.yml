@@ -9,12 +9,7 @@ jobs:
     steps:
       - uses: convictional/trigger-workflow-and-wait@v1.6.1
         with:
-          github-token: ${{ secrets.GHT_EXECUTE_ACTIONS }}
-          script: |
-            const result = await github.rest.actions.createWorkflowDispatch({
-              owner: 'stormeye2000',
-              repo: 'cspr-java-sdk-evaluation',
-              workflow_id: 'evaluation.yml',
-              ref: 'main'
-            })
-            console.log(result)
+          owner: stormeye2000
+          repo: cspr-java-sdk-evaluation
+          github_token: ${{ secrets.GHT_EXECUTE_ACTIONS }}
+          workflow_file_name: evaluation.yaml
