@@ -4,14 +4,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  uses: actions/github-script@v6
-  with:
-    github-token: ${{ secrets.GHA_WORKFLOW_TRIGGER }}
-    script: |
-      const result = await github.rest.actions.createWorkflowDispatch({
-        owner: 'stormeye2000',
-        repo: 'cspr-java-sdk-evaluation',
-        workflow_id: 'evaluation.yml',
-        ref: 'main'
-      })
-      console.log(result)
+  integration-test:
+    uses: actions/github-script@v6
+    with:
+      github-token: ${{ secrets.GHA_WORKFLOW_TRIGGER }}
+      script: |
+        const result = await github.rest.actions.createWorkflowDispatch({
+          owner: 'stormeye2000',
+          repo: 'cspr-java-sdk-evaluation',
+          workflow_id: 'evaluation.yml',
+          ref: 'main'
+        })
+        console.log(result)
