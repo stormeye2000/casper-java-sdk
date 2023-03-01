@@ -14,4 +14,4 @@ jobs:
           repo: cspr-java-sdk-evaluation
           ref: main
           github_token: ${{ secrets.GHT_EXECUTE_ACTIONS }}
-          workflow_sfile_name: evaluation.yaml
+          workflow_file_name: evaluation.yaml
