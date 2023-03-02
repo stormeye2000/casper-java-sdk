@@ -18,9 +18,9 @@ jobs:
           owner: stormeye2000
           repo: cspr-java-sdk-evaluation
           github_token: ${{ secrets.GHT_EXECUTE_ACTIONS }}
-          workflow_file_name: deploy.yml
+          workflow_file_name: evaluation.yml
           ref: main
       - name: Running Integration Tests
         run: |
           echo "Running Integration Tests"
-          sleep 60s
+          sleep 10s
