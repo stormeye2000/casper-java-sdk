@@ -9,10 +9,10 @@ jobs:
     name: Run Web App
     runs-on: ubuntu-latest
     steps:
-      - name: Build Web App
+      - name: Setting Up Integration Tests
         run: |
-          echo "Build Web App"
-          sleep 60s
+          echo "Setting Up Integration Tests"
+          sleep 10s
       - uses: convictional/trigger-workflow-and-wait@v1.6.5
         with:
           owner: stormeye2000
@@ -20,7 +20,7 @@ jobs:
           github_token: ${{ secrets.GHT_EXECUTE_ACTIONS }}
           workflow_file_name: deploy.yml
           ref: main
-      - name: Deploy Web App
+      - name: Running Integration Tests
         run: |
-          echo "Deploy Web App"
+          echo "Running Integration Tests"
           sleep 60s
