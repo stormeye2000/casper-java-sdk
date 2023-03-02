@@ -1,19 +1,26 @@
-name: Integration Tests
+name: Evaluation
 
 on:
   push:
     branches:
-      - "main"
+      - main
 jobs:
-  integration-test:
+  build:
+    name: Run Web App
     runs-on: ubuntu-latest
     steps:
+      - name: Build Web App
+        run: |
+          echo "Build Web App"
+          sleep 10s
       - uses: convictional/trigger-workflow-and-wait@v1.6.5
         with:
           owner: stormeye2000
-          github_user: stormeye2000
           repo: cspr-java-sdk-evaluation
-          ref: main
-          wait_interval: 60
           github_token: ${{ secrets.GHT_EXECUTE_ACTIONS }}
-          workflow_file_name: evaluation.yaml
+          workflow_file_name: deploy.yml
+          ref: main
+      - name: Deploy Web App
+        run: |
+          echo "Deploy Web App"
+          sleep 10s
