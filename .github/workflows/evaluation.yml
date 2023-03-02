@@ -1,4 +1,4 @@
-name: Evaluation
+name: NCTL Evaluation
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   build:
-    name: Run Web App
+    name: Run NCTL Tests
     runs-on: ubuntu-latest
     steps:
       - name: Setting Up Integration Tests
